@@ -1,0 +1,26 @@
+#N canvas 467 554 470 295 10;
+#X obj 100 47 route \$1;
+#X obj 100 70 tgl 15 0 empty empty empty 17 7 0 10 -261234 -1 -1 1
+1;
+#X obj 100 90 list prepend \$1;
+#X obj 100 251 s \$2-shader;
+#X msg 100 228 dCell_\$1 \$2;
+#X obj 100 113 t l l;
+#X obj 127 205 array set \$2-cellStates;
+#X obj 127 136 unpack f f;
+#X obj 127 182 swap;
+#X obj 100 25 r \$2-setDCell;
+#X obj 127 159 + 27;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 5 1 7 0;
+#X connect 7 0 10 0;
+#X connect 7 1 8 1;
+#X connect 8 0 6 0;
+#X connect 8 1 6 1;
+#X connect 9 0 0 0;
+#X connect 10 0 8 0;
+#X coords 0 -1 1 1 15 15 2 100 70;
